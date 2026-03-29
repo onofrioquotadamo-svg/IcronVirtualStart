@@ -61,6 +61,25 @@ def main():
         }
         
         .meta { color: #aaa !important; }
+        
+        /* Dark Input Fields & Selectbox */
+        div[data-baseweb="input"] {
+            background-color: #161b22 !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+        }
+        div[data-baseweb="input"] input {
+            color: white !important;
+        }
+        div[data-baseweb="select"] {
+            background-color: #161b22 !important;
+        }
+        div[data-baseweb="select"] div {
+            color: white !important;
+        }
+        label p {
+            color: #4caf50 !important;
+            font-weight: 700 !important;
+        }
         </style>
     """, unsafe_allow_html=True)
 

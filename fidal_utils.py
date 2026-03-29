@@ -62,7 +62,11 @@ def hms_to_seconds(t_str):
 
 def fetch_from_icron(id_gara):
     url = "https://www.icron.it/IcronNewGO/getIscrizioni"
-    headers = {"Content-Type": "application/json;charset=UTF-8", "Referer": "https://www.icron.it/newgo/"}
+    headers = {
+        "Content-Type": "application/json;charset=UTF-8", 
+        "Referer": "https://www.icron.it/newgo/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
     payload = {"idGara": str(id_gara).strip()}
     resp = requests.post(url, json=payload, headers=headers, timeout=15)
     resp.raise_for_status()
