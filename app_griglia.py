@@ -13,29 +13,38 @@ st.set_page_config(page_title="ICRON Virtual Start", page_icon="🏁", layout="w
 
 def main():
     # CSS Premium
+    # CSS Premium
     st.markdown("""
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
-    html, body, [data-testid="stAppViewContainer"] { font-family: 'Outfit', sans-serif !important; background: #0e1117; color: white; }
-    
-    .grid-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-        border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
-        padding: 15px; margin-bottom: 10px; position: relative;
-    }
-    .rank-badge {
-        position: absolute; right: 15px; top: 15px;
-        font-size: 1.5rem; font-weight: 900; opacity: 0.3;
-    }
-    .rank-1 { border-left: 5px solid #ffd700; background: linear-gradient(90deg, rgba(255,215,0,0.1) 0%, transparent 100%); }
-    .rank-2 { border-left: 5px solid #c0c0c0; background: linear-gradient(90deg, rgba(192,192,192,0.1) 0%, transparent 100%); }
-    .rank-3 { border-left: 5px solid #cd7f32; background: linear-gradient(90deg, rgba(205,127,50,0.1) 0%, transparent 100%); }
-    
-    .bib { background: #4caf50; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; }
-    .name { font-size: 1.1rem; font-weight: 700; margin-left: 8px; }
-    .pb-val { font-size: 1.4rem; font-weight: 900; color: #4caf50; margin-top: 5px; }
-    .meta { font-size: 0.8rem; color: #888; }
-    </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        
+        html, body, [data-testid="stAppViewContainer"] {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #0e1117 !important;
+            color: white !important;
+        }
+        
+        .grid-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 15px; 
+            margin-bottom: 10px; 
+            position: relative;
+        }
+        .rank-badge {
+            position: absolute; right: 15px; top: 15px;
+            font-size: 1.5rem; font-weight: 900; opacity: 0.3;
+        }
+        .rank-1 { border-left: 5px solid #ffd700; background: linear-gradient(90deg, rgba(255,215,0,0.1) 0%, transparent 100%); }
+        .rank-2 { border-left: 5px solid #c0c0c0; background: linear-gradient(90deg, rgba(192,192,192,0.1) 0%, transparent 100%); }
+        .rank-3 { border-left: 5px solid #cd7f32; background: linear-gradient(90deg, rgba(205,127,50,0.1) 0%, transparent 100%); }
+        
+        .bib { background: #4caf50; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; }
+        .name { font-size: 1.1rem; font-weight: 700; margin-left: 8px; }
+        .pb-val { font-size: 1.4rem; font-weight: 900; color: #4caf50; margin-top: 5px; }
+        .meta { font-size: 0.8rem; color: #888; }
+        </style>
     """, unsafe_allow_html=True)
 
     # Header con Logo
