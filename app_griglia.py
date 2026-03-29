@@ -62,20 +62,19 @@ def main():
         
         .meta { color: #aaa !important; }
         
-        /* Dark Input Fields & Selectbox */
-        div[data-baseweb="input"] {
+        /* Aggressive Dark Inputs */
+        div[data-baseweb="input"], div[data-baseweb="select"], .stTextInput input, .stSelectbox [data-baseweb="select"] {
             background-color: #161b22 !important;
+            color: white !important;
+            border-radius: 8px !important;
             border: 1px solid rgba(255,255,255,0.1) !important;
         }
-        div[data-baseweb="input"] input {
-            color: white !important;
+        
+        /* Fix per la tabella dei risultati */
+        div[data-testid="stDataFrame"] {
+            background-color: #0e1117 !important;
         }
-        div[data-baseweb="select"] {
-            background-color: #161b22 !important;
-        }
-        div[data-baseweb="select"] div {
-            color: white !important;
-        }
+        
         label p {
             color: #4caf50 !important;
             font-weight: 700 !important;
@@ -175,8 +174,8 @@ def main():
                         'LAST_ACT': current_activity
                     }
 
-                # Multithreading per velocità
-                with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+                # Multithreading per velocità (ridotto a 5 per stabilità su Render)
+                with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
                     futures = [executor.submit(process_athlete, row) for _, row in df_iscritti.iterrows()]
                     pbar = st.progress(0)
                     for i, f in enumerate(concurrent.futures.as_completed(futures)):
