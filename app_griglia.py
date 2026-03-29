@@ -43,7 +43,24 @@ def main():
         .bib { background: #4caf50; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; }
         .name { font-size: 1.1rem; font-weight: 700; margin-left: 8px; }
         .pb-val { font-size: 1.4rem; font-weight: 900; color: #4caf50; margin-top: 5px; }
-        .meta { font-size: 0.8rem; color: #888; }
+        .stButton > button, .stDownloadButton > button {
+            background-color: #4caf50 !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+        }
+        
+        .stButton > button:hover, .stDownloadButton > button:hover {
+            background-color: #45a049 !important;
+            border: none !important;
+        }
+        
+        h1, h2, h3, h4, h5, p, span, div {
+            color: white !important;
+        }
+        
+        .meta { color: #aaa !important; }
         </style>
     """, unsafe_allow_html=True)
 
